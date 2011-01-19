@@ -1,0 +1,45 @@
+.mv-s ul,.mv-s li {
+  list-style-type: none;
+  margin: 0px;
+  padding: 0px;
+}
+.mv-s a:link {
+  text-decoration:none;
+  color:inherit;
+}
+
+.mv-s {
+  font-size: 14px;
+  line-height:15px;
+  margin-left:6px;
+  overflow:auto;
+}
+
+.mv-s .mv-s-name {
+  font-size: 0.8em;
+}
+
+.mv-s .mv-channels {
+}
+.mv-s .mv-c {
+  padding-left: 14px;
+  background: url('img/channel_12.png') no-repeat 0px 0px;
+  margin-left:-6px;
+}
+
+.mv-s .mv-c .mv-c-name {
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.mv-s .mv-users {
+}
+.mv-s .mv-u {
+  padding-left: 14px;
+  background: url('img/talking_off_12.png') no-repeat 0px 2px;
+  margin-left:-6px;
+}
+.mv-icon {
+  padding-left:3px;
+}
+

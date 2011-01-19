@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>MView – Mumble Channel Viewer</title>
+  <style>
+    pre.code { background-color:#dddddd; padding:4px 6px; }
+    .code-placeholder { font-style:italic; color:#000044; }
+  </style>
+</head>
+<body>
+
+<h1>MView is a standalone JS <a href="http://mumble.sourceforge.net/Channel_Viewer_Protocol" rel="external">MumbleViewerProtocol</a> Viewer</h1>
+<p><strong>valid HTML, no iframe – Object Oriented JavaScript</strong></p>
+
+<h2>How to embed:</h2>
+<pre class="code"><code class="language-html">&lt;div id="mview-container"&gt;&lt;/div&gt;
+&lt;script type="text/javascript" src="mview.js"&gt;&lt;/script&gt;
+&lt;script type="text/javascript"&gt;
+  var settings = {
+    target: '#mview-container',
+    source: '<span class="code-placeholder">&lt;pathto&gt;</span>/MumPI/?view=json&amp;serverId=<span class="code-placeholder">&lt;ID&gt;</span>&amp;callback=?',
+    resurl: '',           // for url to folder with css file and img folder.
+    refreshinterval: 30   <span style="color:#666666;">// in seconds, 0 for no automatic refresh</span>
+  };
+  mv = new MView(settings);
+  mv.load();
+&lt;/script&gt;
+</code></pre>
+<p>
+  You’ll have to provide the path to your JSON-data source which provides the server data. If you’re using MumPI just add the correct URL to MumPI with the corresponding parameters (see above).<br/>
+  Adding <code>callback=?</code> as a parameter allows for JSONP callbacks.
+</p>
+<p>
+  As a further example to make it clear: A different but valid source may be <code>source: 'http://demo.mumble-django.org/mumble-django/mumble/1.json?callback=?'</code>.
+</p>
+
+</body>
+</html>
